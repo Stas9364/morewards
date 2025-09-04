@@ -30,7 +30,9 @@ const typeOptions = [
 ];
 
 interface UserInfoFormEditingProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   user: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSave: (user: any) => void;
   onCancel: () => void;
 }

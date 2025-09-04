@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Sidebar } from "../../../../../Sidebar";
-import { VendorInfoCard } from "./VendorInfoCard";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 import { LocationsManagementSection } from "./LocationsManagementSection";
+import { VendorInfoCard } from "./VendorInfoCard";
 
 // @component: DashboardLayout
 export const DashboardLayout = () => {
@@ -14,26 +13,6 @@ export const DashboardLayout = () => {
   // @return
   return (
     <div className="min-h-screen bg-gray-50 flex">
-      {/* Mobile overlay */}
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={toggleSidebar}
-        />
-      )}
-
-      {/* Sidebar */}
-      <div
-        className={`
-        fixed lg:static inset-y-0 left-0 z-50 w-64 transform transition-transform duration-300 ease-in-out
-        ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-        }
-      `}
-      >
-        <Sidebar onClose={() => setIsSidebarOpen(false)} />
-      </div>
-
       {/* Main content */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile header */}

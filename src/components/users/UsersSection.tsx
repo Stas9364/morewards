@@ -38,6 +38,7 @@ export default function UsersSection({ className }: UsersSectionProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [editingUser, setEditingUser] = useState<any>(null);
   const [users, setUsers] = useState(userData);
   const totalRows = users.length;
@@ -62,7 +63,7 @@ export default function UsersSection({ className }: UsersSectionProps) {
   const handleAddUser = () => {
     setIsFormVisible(true);
   };
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSaveUser = (newUser: any) => {
     setUsers((prev) => [...prev, newUser]);
     setIsFormVisible(false);
@@ -71,12 +72,12 @@ export default function UsersSection({ className }: UsersSectionProps) {
   const handleCancelUser = () => {
     setIsFormVisible(false);
   };
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleEditUser = (user: any) => {
     setEditingUser(user);
     setIsEditing(true);
   };
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSaveEditedUser = (updatedUser: any) => {
     setUsers((prev) =>
       prev.map((user) => (user.id === updatedUser.id ? updatedUser : user))

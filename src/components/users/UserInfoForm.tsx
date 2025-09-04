@@ -38,7 +38,7 @@ const typeOptions = [
 ];
 
 interface UserInfoFormProps {
-  onSave: (user: any) => void;
+  onSave: (user: object) => void;
   onCancel: () => void;
 }
 
