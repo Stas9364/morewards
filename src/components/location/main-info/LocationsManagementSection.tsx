@@ -1,11 +1,11 @@
-import React from 'react';
-import { Plus } from 'lucide-react';
-import { LocationsTable } from './LocationsTable';
+import { Plus } from "lucide-react";
+import { LocationsTable } from "./LocationsTable";
 
 // @component: LocationsManagementSection
 export const LocationsManagementSection = () => {
   // @return
-  return <div className="space-y-6">
+  return (
+    <div className="space-y-6">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h2 className="text-2xl font-bold text-gray-900">
@@ -19,5 +19,6 @@ export const LocationsManagementSection = () => {
 
       {/* Table */}
       <LocationsTable />
-    </div>;
+    </div>
+  );
 };

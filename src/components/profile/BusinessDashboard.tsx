@@ -3,6 +3,15 @@ import { useState } from "react";
 import { BusinessDetailsCard } from "./BusinessDetailsCard";
 import { BusinessLocationDefaultsCard } from "./BusinessLocationDefaultsCard";
 
+type DayOfWeek =
+  | "Sunday"
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday";
+
 const initialHours = {
   Sunday: {
     isOpen: false,
@@ -71,7 +80,7 @@ export const BusinessDashboard = () => {
     setIsEditingSocial(!isEditingSocial);
   };
   const handleHoursChange = (
-    day: string,
+    day: DayOfWeek,
     field: string,
     value: string | boolean
   ) => {
@@ -201,7 +210,11 @@ export const BusinessDashboard = () => {
                         type="checkbox"
                         checked={schedule.isOpen}
                         onChange={(e) =>
-                          handleHoursChange(day, "isOpen", e.target.checked)
+                          handleHoursChange(
+                            day as DayOfWeek,
+                            "isOpen",
+                            e.target.checked
+                          )
                         }
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />
@@ -213,7 +226,11 @@ export const BusinessDashboard = () => {
                               .replace(" am", "")
                               .replace(" pm", "")}
                             onChange={(e) =>
-                              handleHoursChange(day, "start", e.target.value)
+                              handleHoursChange(
+                                day as DayOfWeek,
+                                "start",
+                                e.target.value
+                              )
                             }
                             className="text-xs border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-blue-500 w-20"
                           />
@@ -224,7 +241,11 @@ export const BusinessDashboard = () => {
                               .replace(" am", "")
                               .replace(" pm", "")}
                             onChange={(e) =>
-                              handleHoursChange(day, "end", e.target.value)
+                              handleHoursChange(
+                                day as DayOfWeek,
+                                "end",
+                                e.target.value
+                              )
                             }
                             className="text-xs border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-blue-500 w-20"
                           />
