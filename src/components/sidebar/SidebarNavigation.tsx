@@ -9,6 +9,7 @@ import {
   X,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { Logo } from "./Logo";
 const navigationItems = [
   {
     id: "home",
@@ -121,11 +122,11 @@ export const SidebarNavigation = ({
             }`
           : "w-64"
       } 
-      bg-gradient-to-b from-cyan-400 to-blue-600 text-white flex flex-col
+      bg-gradient-to-r from-[rgb(116,206,216)] to-[rgb(69,149,205)] text-white flex flex-col
     `}
     >
       <div className="p-6 flex items-center justify-between">
-        <h1 className="text-2xl font-bold">MORewards</h1>
+        <Logo />
         {isMobile && (
           <button
             onClick={onClose}

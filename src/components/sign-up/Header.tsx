@@ -1,3 +1,5 @@
+import { Logo } from "../sidebar/Logo";
+
 interface HeaderProps {
   type?: "registration" | "profile";
   vendorName?: string;
@@ -14,17 +16,11 @@ export const Header = ({
 }: HeaderProps) => {
   // @return
   return (
-    <header className="bg-gradient-to-r from-blue-400 to-cyan-400 text-white">
+    <header className="bg-gradient-to-r from-[rgb(116,206,216)] to-[rgb(69,149,205)] text-white">
       {type === "registration" ? (
         <div className="px-4 py-6">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="bg-white rounded-lg px-3 py-1">
-                <span className="text-gray-800 font-bold text-lg">
-                  MORewards
-                </span>
-              </div>
-            </div>
+            <Logo />
 
             <h1 className="text-2xl font-semibold">
               <span>Vendor Portal</span>
