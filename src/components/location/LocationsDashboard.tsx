@@ -1,5 +1,6 @@
 import { ChevronDown, ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 interface Location {
   id: string;
   name: string;
@@ -21,6 +22,8 @@ const LOCATIONS_DATA: Location[] = [
 
 // @component: LocationsDashboard
 export const LocationsDashboard = () => {
+  const navigate = useNavigate();
+
   const [locations, setLocations] = useState<Location[]>(LOCATIONS_DATA);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
@@ -82,7 +85,7 @@ export const LocationsDashboard = () => {
               <h2 className="text-2xl font-bold text-gray-900 mb-4 sm:mb-0">
                 <span>My Locations</span>
               </h2>
-              <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+              <button onClick={() => navigate('/locations/main-info')} className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 <Plus size={20} className="mr-2" />
                 <span>Add new location</span>
               </button>
