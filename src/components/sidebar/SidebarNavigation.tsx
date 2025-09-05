@@ -147,7 +147,7 @@ export const SidebarNavigation = ({
                     to={item.slug}
                     end
                     className={({ isActive }) =>
-                      `w-full flex items-center justify-between px-4 py-3 rounded-lg text-left transition-all duration-200 ${
+                      `w-full flex items-center justify-between px-4 py-2 rounded-lg text-left transition-all duration-200 ${
                         isActive
                           ? "bg-white/20 text-white shadow-lg"
                           : "text-white/80 hover:bg-white/10 hover:text-white"
@@ -161,7 +161,7 @@ export const SidebarNavigation = ({
                   </NavLink>
                 ) : (
                   <div
-                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-left transition-all duration-200 text-white/80 hover:bg-white/10 hover:text-white`}
+                    className={`w-full flex items-center justify-between px-4 py-2 rounded-lg text-left transition-all duration-200 text-white/80`}
                   >
                     <div className="flex items-center space-x-3">
                       <IconComponent className="w-5 h-5" />
@@ -171,7 +171,7 @@ export const SidebarNavigation = ({
                 )}
 
                 {item.subItems && (
-                  <ul className="mt-2 ml-8 space-y-1 flex flex-col ">
+                  <ul className="ml-8 space-y-1 flex flex-col ">
                     {item.subItems.map((subItem) => (
                       <li key={subItem.id}>
                         <NavLink
@@ -198,7 +198,7 @@ export const SidebarNavigation = ({
       </nav>
 
       <div className="p-4 border-t border-white/20">
-        <button className="w-full flex items-center space-x-3 px-4 py-3 text-white/80 hover:bg-white/10 hover:text-white rounded-lg transition-colors duration-200">
+        <button className="w-full flex items-center space-x-3 px-4 py-1 text-white/80 hover:bg-white/10 hover:text-white rounded-lg transition-colors duration-200">
           <LogOut className="w-5 h-5" />
           <span className="font-medium">Logout</span>
         </button>

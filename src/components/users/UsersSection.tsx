@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Check,
   ChevronDown,
@@ -63,7 +61,7 @@ export default function UsersSection({ className }: UsersSectionProps) {
   const handleAddUser = () => {
     setIsFormVisible(true);
   };
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSaveUser = (newUser: any) => {
     setUsers((prev) => [...prev, newUser]);
     setIsFormVisible(false);
@@ -72,12 +70,12 @@ export default function UsersSection({ className }: UsersSectionProps) {
   const handleCancelUser = () => {
     setIsFormVisible(false);
   };
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleEditUser = (user: any) => {
     setEditingUser(user);
     setIsEditing(true);
   };
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSaveEditedUser = (updatedUser: any) => {
     setUsers((prev) =>
       prev.map((user) => (user.id === updatedUser.id ? updatedUser : user))
@@ -113,7 +111,7 @@ export default function UsersSection({ className }: UsersSectionProps) {
             </h2>
             <button
               onClick={handleAddUser}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <Plus size={20} className="mr-2" />
               <span>Add New User</span>

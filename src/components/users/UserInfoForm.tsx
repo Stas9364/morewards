@@ -309,14 +309,14 @@ export const UserInfoForm = ({ onSave, onCancel }: UserInfoFormProps) => {
         <div className="flex justify-end space-x-4 pt-6">
           <button
             onClick={handleCancel}
-            className="px-6 py-3 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
+            className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium"
           >
             <span>Cancel</span>
           </button>
           <button
             onClick={handleSave}
             disabled={!isFormValid || isSaving}
-            className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
           >
             <span>{isSaving ? "Saving..." : "Save"}</span>
           </button>

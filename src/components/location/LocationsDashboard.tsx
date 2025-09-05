@@ -43,7 +43,7 @@ export const LocationsDashboard = () => {
 
   // @return
   return (
-    <div className="min-h-screen flex">
+    <div className=" flex">
       {/* Main Content */}
       <div className="flex-1 lg:ml-0">
         <div className="md:p-6  mx-auto">

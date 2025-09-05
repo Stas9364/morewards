@@ -12,7 +12,7 @@ export const DashboardLayout = () => {
 
   // @return
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className=" bg-gray-50 flex">
       {/* Main content */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile header */}
